@@ -1,0 +1,217 @@
+.background {
+    /* background-image: url('D:/專案/imgs/寶藏背景_白-01.png'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .bird-background {
+    /* background-image: url('D:/專案/imgs/青鳥背景.png'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  
+  .img-move {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s ease-out;
+  }
+  
+  .float-out {
+    animation: float 3s ease-out forwards;
+  }
+  
+  @keyframes float {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .img-fluid {
+    transition: opacity 1s ease-out;
+  }
+  
+  .img-shrink-move {
+    transition: transform 1s ease-out, top 1s ease-out, left 1s ease-out;
+  }
+  
+  #main-illustration {
+    margin-top: 74px;
+  }
+  
+  .anchor_box {
+    position: fixed;
+    top: 40%;
+    border : 2px solid black !important;
+    width: 150px;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  
+  .anchor_link {
+    line-height: 40px;
+    color: #4B3621;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .anchor_link::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    height: 3px;
+    background-color: #333;
+    transition: width 0.3s ease;
+  }
+  
+  .anchor_link:hover,
+  .anchor_link.active {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .anchor_link:hover::after,
+  .anchor_link.active::after {
+    width: 50%;
+  }
+  
+  .item_cate {
+    letter-spacing: .6875rem;
+    margin-bottom: .5rem;
+    white-space: pre;
+  }
+  
+  .item.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+  }
+  
+  .writing-mode-vertical-lr {
+    writing-mode: vertical-lr;
+  }
+  
+  .title_bg {
+    /* background-image: url('D:/專案/imgs/title_bg.webp'); */
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+  
+  .centered-text {
+    position: absolute;
+    top: 32%;
+    left: 12%;
+  }
+  
+  .h5 {
+    font-size: 18px;
+  }
+  
+  .fs-4rem {
+    font-size: 3.7rem;
+  }
+  
+  .content-block {
+    width: 150%;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 10px;
+  }
+  
+  .content-block::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .fs-2-5rem {
+    font-size: 2.5rem;
+  }
+  
+  .title-border-bottom {
+    border-bottom: 2px solid #4B3621;
+  }
+  
+  .title-border-left {
+    border-left: 2px solid #4B3621;
+  }
+  
+  .title-style {
+    color: #4B3621;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .color-hex4B3621 {
+    color: #4B3621;
+  }
+  
+  .letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+  }
+  
+  .letter.behind {
+    transform: rotateX(-90deg);
+  }
+  
+  .letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .no-outline:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .bg-hex {
+    /* background-image: url('D:/專案/imgs/bg.webp'); */
+    background-size: cover;
+  }
+  
+  .h1 {
+    font-size: 45px;
+  }
+  
+  .bg-footer {
+    /* background-image: url('D:/專案/imgs/footer_bg.webp'); */
+    background-size: cover;
+  }
+  
+  .cusor-pointer {
+    cursor: pointer;
+  }
+  
+  .funcbtn_box {
+    z-index: 1000;
+  }
+  
+  .bg-hexd2b48c {
+    background: #d2b48c;
+    opacity: 0.7;
+  }
+  
