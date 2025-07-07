@@ -1,11 +1,11 @@
 .background {
-    /* background-image: url('D:/專案/imgs/寶藏背景_白-01.png'); */
+    /* background-image: url('imgs/寶藏背景_白-01.png'); */
     background-repeat: no-repeat;
     background-size: contain;
   }
   
   .bird-background {
-    /* background-image: url('D:/專案/imgs/青鳥背景.png'); */
+    /* background-image: url('imgs/青鳥背景.png'); */
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0;
@@ -109,7 +109,7 @@
   }
   
   .title_bg {
-    /* background-image: url('D:/專案/imgs/title_bg.webp'); */
+    /* background-image: url('imgs/title_bg.webp'); */
     background-repeat: no-repeat;
     z-index: 1000;
   }
@@ -189,7 +189,7 @@
   }
   
   .bg-hex {
-    /* background-image: url('D:/專案/imgs/bg.webp'); */
+    /* background-image: url('imgs/bg.webp'); */
     background-size: cover;
   }
   
@@ -198,7 +198,7 @@
   }
   
   .bg-footer {
-    /* background-image: url('D:/專案/imgs/footer_bg.webp'); */
+    /* background-image: url('imgs/footer_bg.webp'); */
     background-size: cover;
   }
   
