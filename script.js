@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fadeInOutOnScroll();
 
   function wrapLetters(element) {
-    const selectors = ['.item_cate', '.item_cate_name', '.h5'];
+    const selectors = ['.item_cate'];
 
     function animateLetter(span, index) {
       return new Promise(resolve => {

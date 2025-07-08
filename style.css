@@ -1,17 +1,73 @@
-.background {
-    /* background-image: url('imgs/寶藏背景_白-01.png'); */
-    background-repeat: no-repeat;
-    background-size: contain;
+* {
+  font-family: Georgia, serif;
+}
+
+.position-absolute-center{
+  position: absolute !important;
+  top: 0 !important;
+  /* left: 30% !important; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.position-absolute-center2{
+  position: absolute !important;
+  top: 0 !important;
+  /* left: 30% !important; */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* 標題底線 */
+.under-line {
+  display: inline-block; /* 讓 p 寬度符合文字寬度 */
+
+}
+.under-line::after {
+  content: "";
+  display: block;
+  width: 100%; /* 底線寬度 = 文字寬度 */
+  height: 1px; /* 底線高度 */
+  background-color: white; /* 底線顏色 */
+  margin: 5px auto 0; /* 與文字距離，auto 讓底線置中 */
+}
+
+/* tour poster */
+.tour-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tour-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.95); /* white background */
+  color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.tour-container:hover .tour-overlay {
+  opacity: 1;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .bird-background {
-    /* background-image: url('imgs/青鳥背景.png'); */
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-  }
-  
+}
+
   .img-move {
     position: absolute;
     top: 0;
@@ -51,7 +107,7 @@
     position: fixed;
     top: 40%;
     border : 2px solid black !important;
-    width: 150px;
+    width: 200px;
     background-color: transparent;
     z-index: 1000;
   }
@@ -61,17 +117,19 @@
     color: #4B3621;
     text-decoration: none;
     position: relative;
+    display: inline-block; /* 讓元素寬度只包覆文字 */
   }
   
   .anchor_link::after {
     content: '';
     position: absolute;
     bottom: 0px;
+    left: 0; /* 從左邊開始 */
     height: 3px;
-    background-color: #333;
+    
+    background-color: white;
     transition: width 0.3s ease;
   }
-  
   .anchor_link:hover,
   .anchor_link.active {
     color: #333;
@@ -80,8 +138,9 @@
   
   .anchor_link:hover::after,
   .anchor_link.active::after {
-    width: 50%;
+    width: 100%;
   }
+  
   
   .item_cate {
     letter-spacing: .6875rem;
@@ -211,7 +270,6 @@
   }
   
   .bg-hexd2b48c {
-    background: #d2b48c; 
-   
+      background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
   }
-  
+   
