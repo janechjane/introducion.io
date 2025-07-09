@@ -16,26 +16,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">    
 </head>
-<body class="text-white">
+<body class="text-white bg-hexd2b48c">
     <header>
 
     </header>
 
-    <div id="content" class="bg-hexd2b48c position-relative">
-        <span class="position-fixed top-0 start-50 z-3"><button class="border-0 rounded-5 rounded-top-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-arrow-down"></i></button></span>
-        <div class="offcanvas offcanvas-top rounded-5 rounded-top-0 position-absolute-center w-50" style="height:100px;" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-            <div class="offcanvas-body d-flex justify-content-center align-items-center">
-                <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" class="text-dark me-3" target="_blank">
-                    <i class="fa-brands fa-spotify fa-3x"></i>
-                </a>
-                  
-                <a href="https://www.instagram.com/theweeknd" class="text-dark me-3" target="_blank">
-                    <i class="fa-brands fa-instagram fa-3x"></i>
-                </a>
-                  
-                <a href="https://www.youtube.com/results?search_query=the+weeknd" class="text-dark" target="_blank">
-                    <i class="fa-brands fa-youtube fa-3x"></i>
-                </a>              
+    <div id="content" class="position-relative">
+        <!-- 最上方中央固定按鈕 -->
+        <span class="position-fixed top-0 start-50 translate-middle-x" style="z-index: 999;">
+        <button class="border-0 rounded-5 rounded-top-0 bg-light px-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <i class="fa-solid fa-arrow-down"></i>
+        </button>
+        </span>
+        <!-- Offcanvas 從上方展開 -->
+        <div class="offcanvas offcanvas-top rounded-bottom-5 w-50 mx-auto" style="height:100px;" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-body d-flex justify-content-center align-items-center">
+            <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" class="text-dark me-3" target="_blank">
+            <i class="fa-brands fa-spotify fa-3x"></i>
+            </a>
+            <a href="https://www.instagram.com/theweeknd" class="text-dark me-3" target="_blank">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=the+weeknd" class="text-dark me-2" target="_blank">
+            <i class="fa-brands fa-youtube fa-3x"></i>
+            </a> 
+            <span class="position-relative">
+                <i class="fa-solid fa-cart-shopping fa-3x"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger">+99</span>
+            </span> 
+        </div>
+        </div>
+       <!-- 左側固定按鈕 -->
+        <span class="position-fixed top-50 start-0 z-3 translate-middle-y">
+        <button class="border-0 rounded-5 rounded-start-0 bg-light p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
+            <i class="fa-solid fa-list"></i>
+        </button>
+        </span>
+
+        <!-- 左側 Offcanvas 小區塊 -->
+        <div class="offcanvas offcanvas-start rounded-5 rounded-start-0" tabindex="-1" id="offcanvasLeft" style="width: 200px; height: 300px;margin-top:100px;">
+            <div class="offcanvas-header py-2">
+                <h6 class="offcanvas-title h4">List</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body p-2">
+                <ul class=" list-unstyled">
+                    <li class="mb-3">
+                        <a href="#item1" class="anchor_link text-decoration-none">
+                            <div class="" id="">
+                                <div class="h6">Introduction</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#item2" class="anchor_link  text-decoration-none">
+                            <div class="">
+                                <div class="h6">Albums</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#item3" class="anchor_link  text-decoration-none">
+                            <div class="">
+                                <div class="h6 ">Tours</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#item4" class="anchor_link text-decoration-none">
+                            <div class="">
+                                <div class="h6">Awards & <br> Achievements</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#item5" class="anchor_link text-decoration-none">
+                            <div class="">
+                                <div class="h6">Film & TV </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#item6" class="anchor_link text-decoration-none">
+                            <div class="">
+                                <div class="h6">Merch</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- carousel -->          
@@ -68,15 +136,17 @@
               <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        <!-- 介紹 -->
         <div class="container" style="padding-top: 40px;" id="item1">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-10 col-10 offset-1">
+                <div class="col-12 col-sm-12">
                     <div class="position-relative mt-4" data-aos="fade-right">
                         <img src="imgs/title_bg.webp" alt="Subtitle Image" class="img-fluid">
                         <div class="centered-text h2 fs-2-5rem color-hex4B3621 fw-bold">Introduction</div>
                     </div>
                     <div class="content-block" data-aos="fade-right">
-                        <div class="h5 border border-2 border-black p-3 rounded-3 ">
+                        <div class="h5 border border-2 border-black p-3 rounded-3">
                             The Weeknd is a Canadian singer, songwriter, and record producer, widely recognized for his distinctive voice and unique musical style. His real name is Abel Makkonen Tesfaye, and he was born on February 16, 1990, in Toronto, Ontario, Canada. He is of Ethiopian descent, and he was raised by his mother and grandmother after his parents separated when he was a child.
 
                             The Weeknd first gained attention in 2010 when he anonymously uploaded several songs to YouTube under the name “The Weeknd.” In 2011, he released three critically acclaimed mixtapes: House of Balloons, Thursday, and Echoes of Silence. These mixtapes showcased his dark and atmospheric R&B sound, combined with mysterious and emotional lyrics, and quickly earned him a dedicated following.
@@ -93,56 +163,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- 專輯 -->
         <div class="text-center" style="margin-top:100px">
             <p class="text-center ms-4 h4 fw-bold mt-5 under-line" >Albums</p>
         </div>
-        <div class="container-fluid" style="margin-top:50px">
-            <div class="anchor_box border border-2 p-3" id="list">
-                <ul class=" list-unstyled text-white">
-                    <li class="mb-3">
-                        <a href="#item1" class="anchor_link text-decoration-none">
-                            <div class="" id="">
-                                <div class="h4 text-white">Introduction</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#item2" class="anchor_link  text-decoration-none">
-                            <div class="">
-                                <div class="h4 text-white">Albums</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#item3" class="anchor_link  text-decoration-none">
-                            <div class="">
-                                <div class="h4 text-white">Tours</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#item4" class="anchor_link text-decoration-none">
-                            <div class="">
-                                <div class="h4 text-white">Awards & <br> Achievements</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="#item5" class="anchor_link text-decoration-none">
-                            <div class="">
-                                <div class="h4 text-white">Film & TV </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div data-bs-spy="scroll" data-bs-target="#list" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                <section class="container">
+      
+        <div data-bs-spy="scroll" data-bs-target="#list" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                <div class="container">
                     <div id="item2">
                         <div class="row mb-3">
-                            <div class="col-7">
+                            <div class="col-12 col-sm-7">
                                 <div class="item fade-in" id="item1-1">
-                                    <div class="d-flex justify-content-center">
+                                    <div class="d-flex justify-content-center p-3 ">
                                         <div>
                                             <div class="item_cate h3 clearfix">Kiss Land</div>
                                             <p class="item_cate_name h5">Release Date : September 10, 2013</p>
@@ -156,45 +189,45 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col text-center">
-                                <!-- <div class="d-flex h-100">
-                                    <img src="imgs/abel_head.png" class="img-fluid align-self-center" width="80%" style="margin-left: 10%" />
-                                </div> -->
-                            </div>
-                        </div>
-                        <div class="row mb-3">
                            
-                            <div class="col">
-                                <div class="item fade-in" id="item1-2">
-                                    <div class="d-flex justify-content-center">
-                                        <div>
-                                            <div class="item_cate h3 clearfix">Beauty Behind the Madness</div>
-                                            <p class="item_cate_name h5">Release Date: August 28, 2015</p>
-                                            <p class="h6">The album that propelled him to global stardom, featuring hits like “Can’t Feel My Face” and “The Hills,” blending pop, R&B, and his signature dark tones.
-                                            </p>
-                       
-                                        </div>
-                                    </div>
-                                    <div class="text-center mt-3">
-                                        <a href="https://www.youtube.com/watch?v=EjlLdjzE7dg&list=PL_ZnCc_3LyhmmRtyCepS0L6T4JUc2wkrV&ab_channel=TheWeeknd-Topic">
-                                            <img src="imgs/Beauty Behind the Madness.jpg" class="shadow img-fluid" width="60%" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="row mb-3">
                             <div class="item fade-in" id="item1-3">
                                 <div class="row">
-                                    <div class="col text-center">
-                                        <a href="https://www.youtube.com/watch?v=3_g2un5M350&list=OLAK5uy_lIh621OMo4dgezJVXJ1d_zVHeClb6RYRU&index=1&ab_channel=TheWeeknd-Topic">
+                                    <div class="col-sm-12 col-12 text-center">
+                                       <a  target="_blank" href="https://www.youtube.com/watch?v=EjlLdjzE7dg&list=PL_ZnCc_3LyhmmRtyCepS0L6T4JUc2wkrV&ab_channel=TheWeeknd-Topic">
+                                                    <img src="imgs/Beauty Behind the Madness.jpg" class="shadow img-fluid" width="60%" />
+                                                </a>
+
+                                    </div>
+                                    <div class="col-sm-12 col-12">
+                                        <div class="d-flex justify-content-center h-100">
+                                            <div class="align-self-center p-3">
+                                                  <div class="item_cate h3 clearfix">Beauty Behind the <br>Madness</div>
+                                                    <p class="item_cate_name h5">Release Date: August 28, 2015</p>
+                                                    <p class="h6">The album that propelled him to global stardom, featuring hits like “Can’t Feel My Face” and “The Hills,” blending pop, R&B, and his signature dark tones.
+                                                    </p>
+
+                           
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="item fade-in" id="item1-3">
+                                <div class="row">
+                                    <div class="col-sm-6 col-12 text-center">
+                                        <a  target="_blank" href="https://www.youtube.com/watch?v=3_g2un5M350&list=OLAK5uy_lIh621OMo4dgezJVXJ1d_zVHeClb6RYRU&index=1&ab_channel=TheWeeknd-Topic">
 
                                             <img src="imgs/starboy.jpg" class="img-fluid shadow" width="80%" />
                                         </a>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-sm-6 col-12">
                                         <div class="d-flex justify-content-center h-100">
-                                            <div class="align-self-center">
+                                            <div class="align-self-center p-3">
                                                 <div class="item_cate h3 clearfix">Starboy</div>
                                                 <p class="item_cate_name h5">November 25, 2016</p>
                                                 <p class="h6"> A stylistic evolution with electronic and synth influences, this album features Daft Punk collaborations and a sleek, futuristic aesthetic.
@@ -210,9 +243,9 @@
                         <div class="row mb-2">
                             <div class="item fade-in" id="item1-4">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-12 col-sm-6">
                                         <div class="d-flex justify-content-center h-100">
-                                            <div class="align-self-center">
+                                            <div class="align-self-center p-3">
                                                 <div class="item_cate h3 clearfix">After Hours</div>
                                                 <p class="item_cate_name h5">Release Date: March 20, 2020</p>
                                                 <p class="h6">Critically acclaimed for its cohesive concept and retro synthwave sound, exploring heartbreak, regret, and hedonism with hits like “Blinding Lights.”
@@ -221,8 +254,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col text-center">
-                                        <a href="https://www.youtube.com/watch?v=JH398xAYpZA&list=PLPRWtKgY2MOu8dPE7sMxQZ07PS1mLqid9&ab_channel=TheWeekndVEVO">
+                                    <div class="col-12 col-sm-6 text-center">
+                                        <a  target="_blank" href="https://www.youtube.com/watch?v=JH398xAYpZA&list=PLPRWtKgY2MOu8dPE7sMxQZ07PS1mLqid9&ab_channel=TheWeekndVEVO">
                                             <img src="imgs/After Hours The Weeknd.jpg" class="img-fluid shadow" width="80%" />
                                         </a>
                                     </div>
@@ -232,14 +265,14 @@
                         <div class="row mb-2">
                             <div class="item fade-in" id="item1-5">
                                 <div class="row">
-                                    <div class="col text-center">
-                                        <a href="https://www.youtube.com/watch?v=w8eFZoOcYKc&list=PLtdokPm7vPss1TXrV4gr2pnSXmMu-UFF4&ab_channel=TheWeekndVEVO">
+                                    <div class="col-12 col-sm-6 text-center">
+                                        <a  target="_blank" href="https://www.youtube.com/watch?v=w8eFZoOcYKc&list=PLtdokPm7vPss1TXrV4gr2pnSXmMu-UFF4&ab_channel=TheWeekndVEVO">
                                             <img src="imgs/_Dawn FM_ Album cover by The Weeknd.jpg" class="img-fluid" width="60%" />
                                         </a>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-12 col-sm-6">
                                         <div class="d-flex justify-content-center h-100">
-                                            <div class="align-self-center">
+                                            <div class="align-self-center p-3">
                                                 <div class="item_cate h3 clearfix">Dawn FM</div>
                                                 <p class="item_cate_name h5">Release Date: January 7, 2022</p>
                                                 <p class="h6"> Styled as a conceptual radio experience, this album features upbeat, introspective tracks with 80s synth-pop influences, narrating themes of purgatory and enlightenment.
@@ -255,9 +288,9 @@
                         <div class="row mb-2">  
                             <div class="item fade-in" id="item1-6">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-12 col-sm-6">
                                     <div class="d-flex justify-content-center h-100">
-                                        <div class="align-self-center">
+                                        <div class="align-self-center p-3">
                                             <div class="item_cate h3 clearfix">Hurry Up Tomorrow</div>
                                             <p class="item_cate_name h5">Release Date: January 31, 2025 </p>
                                             <p class="h6">The sixth studio album—intended as the conclusion of his conceptual trilogy that began with After Hours (2020) and Dawn FM (2022)</p>
@@ -265,8 +298,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col text-center">
-                                    <a href="https://www.youtube.com/watch?v=wnTz65qqxI0&list=PLS4jAfE9d3aKTzNUHg06zmHKqwPWkVz-F&ab_channel=TheWeeknd-Topic">
+                                <div class="col-12 col-sm-6 text-center">
+                                    <a  target="_blank" href="https://www.youtube.com/watch?v=wnTz65qqxI0&list=PLS4jAfE9d3aKTzNUHg06zmHKqwPWkVz-F&ab_channel=TheWeeknd-Topic">
                                         <img src="imgs/The official Cover for The Weeknds last album….jpg" class="img-fluid shadow" width="80%" />
                                     </a>
                                 </div>
@@ -282,92 +315,205 @@
         </div> 
  
        
-                     
-  
+        <!-- tours -->
         <div class="text-center">
             <p class="text-center ms-4 h4 fw-bold mt-5 under-line">Tours</p>
         </div>
         <div class="row mt-5" id="item3">
-            <!-- <div class="h1 fw-bold ms-3 mb-2">Tour</div> -->
+            
             <div class="col-sm-6 col-12 m-0 p-0">
                 <div class="tour-container" data-aos="fade-up">
                   <img src="imgs/AFTER HOURS TILL DAWN 2025 STADIUM TOUR.jpg" alt="After Hours Till Dawn Tour">
-                  <div class="tour-overlay text-center">
-                    <p><strong>Dates:</strong> July 2022 – September 3, 2025</p>
-                    <p><strong>Scope:</strong> A massive stadium tour spanning North America, Europe, Latin America, and Oceania</p>
-                    <p><strong>Highlights:</strong> Began July 14, 2022 in Philadelphia; 112 shows in stadium-sized venues; resumed in the US/Canada on May 9, 2025 through September 3, 2025, concluding at San Antonio’s Alamodome.</p>
-                    <p><strong>Supporting Acts:</strong> Playboi Carti and Mike Dean perform as special guests</p>
-                    <p><strong>Significance:</strong> Promotes After Hours, Dawn FM, and Hurry Up Tomorrow. Rumored to be his final tour under this persona.</p>
-                  </div>
+                
+                    <div class="container p-5 tour-overlay">
+                        <p><strong>Dates:</strong> July 2022 – September 3, 2025</p>
+                        <p><strong>Scope:</strong> A massive stadium tour spanning North America, Europe, Latin America, and Oceania</p>
+                        <p><strong>Highlights:</strong> Began July 14, 2022 in Philadelphia; 112 shows in stadium-sized venues; resumed in the US/Canada on May 9, 2025 through September 3, 2025, concluding at San Antonio’s Alamodome.</p>
+                        <p><strong>Supporting Acts:</strong> Playboi Carti and Mike Dean perform as special guests</p>
+                        <p><strong>Significance:</strong> Promotes After Hours, Dawn FM, and Hurry Up Tomorrow. Rumored to be his final tour under this persona.</p>
+                    </div>
+                           
                 </div>
             </div>
             <div class="col-sm-6 col-12 m-0 p-0">
                 <div class="tour-container" data-aos="fade-up">
                   <img src="imgs/Starboy Legend of the Fall.jpg" alt="Starboy: Legend of the Fall Tour">
-                  <div class="tour-overlay text-center">
-                    <p><strong>Dates:</strong> February 17, 2017 – December 14, 2017</p>
-                    <p><strong>Scope:</strong> Worldwide tour covering North America, Europe, South America, Oceania, and Asia</p>
-                    <p><strong>Highlights:</strong> Supported his third studio album "Starboy"; featured multiple legs and over 90 shows globally</p>
-                    <p><strong>Supporting Acts:</strong> Included artists like Bryson Tiller, Lil Uzi Vert, and Rae Sremmurd in different regions</p>
-                    <p><strong>Significance:</strong> Established The Weeknd as a major international arena headliner with futuristic stage design and visuals</p>
+                 
+                    <div class="container p-5 tour-overlay">
+                        <p><strong>Dates:</strong> February 17, 2017 – December 14, 2017</p>
+                        <p><strong>Scope:</strong> Worldwide tour covering North America, Europe, South America, Oceania, and Asia</p>
+                        <p><strong>Highlights:</strong> Supported his third studio album "Starboy"; featured multiple legs and over 90 shows globally</p>
+                        <p><strong>Supporting Acts:</strong> Included artists like Bryson Tiller, Lil Uzi Vert, and Rae Sremmurd in different regions</p>
+                        <p><strong>Significance:</strong> Established The Weeknd as a major international arena headliner with futuristic stage design and visuals</p>
+                      </div>
                   </div>
-                </div>
+                
               </div>              
         </div>
-        <!-- <hr class="border-3 mt-5 mb-5"> -->
+        
+        <!-- Awards -->
         <div class="text-center mt-5">
             <p class="text-center ms-4 h4 fw-bold mb-5 under-line">Awards & Achievements</p>
-        </div>
+        </div>        
         <div class="container">
-            <div class="row mb-5" id="item4" data-aos="fade-right">               
-                <div class="col-4 m-0 p-0 text-white">
-                    <img src="imgs/grammy.jpg" width="100%" height="100%"   alt="">
-                </div>
-                <div class="col-4 m-0 p-0">
-                     <img src="imgs/billboard.jpg" width="100%" height="100%" alt="">
-                </div>
-                <div class="col-4 m-0 p-0">
-                     <img src="imgs/spotify.jpg" width="100%" height="100%"  alt="">
-                </div>
-               
-            </div>
-            <div class="text-center">
-                <p class="under-line h4 fw-bold mt-5">Film & TV</p>
-              </div>
-              
-            <div class="row mt-5" id="item5" data-aos="fade-left">
-                
-                <div class="col-4 m-0 p-0">
-                    
-                        <img src="imgs/Uncut Gems (2019).jpg" width="100%" height="80%" alt="...">
-                        <!-- <div class="mt-2 border border-top-0 border-start-0 border-end-0">
-                            <a href="http://" class="text-white text-decoration-none me-1"><b>Uncut Gems (2019)</b> – Made a cameo appearance as himself, performing and acting alongside Adam Sandler.<i class="fa-solid fa-arrow-right "></i></a>
-                        </div> -->
-                       
-                </div>
-               
-                <div class="col-4 m-0 p-0">
-                
-                        <img src="imgs/idol.jpg" width="100%" height="80%"  alt="...">
-                      
-                </div>
-                <div class="col-4 m-0 p-0">
+            <div class="row mb-5" id="item4">               
+                <div class="col-sm-4 col-12 m-sm-0 m-3 p-sm-1 px-3 text-white"  data-aos="fade-right">
                   
-                        <img src="imgs/hurry.jpg" width="100%" height="80%" alt="...">
-                      
+                    <a href="https://www.grammy.com/artists/The-Weeknd/24884" class="d-block mt-2 text-white ">
+                        <div class="image-container">
+                            <img src="imgs/grammy.jpg" alt="">
+                        </div>
+                        The Weeknd has earned over 15 Grammy nominations and won 3 awards.
+                    </a>
+                </div>
+                <div class="col-sm-4 col-12 m-sm-0 m-3 p-sm-1 px-3"  data-aos="fade-right">
+                 
+                    <a href="https://www.billboard.com/artist/the-weeknd/" class="d-block mt-2 text-white">
+                        <div class="image-container">
+                            <img src="imgs/billboard.jpg" alt="">
+                        </div>
+                        The Weeknd won 10 Billboard awards in 2021 and led with 17 nominations in 2022. "Blinding Lights" became the No.1 Hot 100 song ever.
+                    </a>
+                </div>
+                <div class="col-sm-4 col-12 m-sm-0 m-3 p-sm-1 px-3"  data-aos="fade-right">
+                   
+                    <a href="https://newsroom.spotify.com/2024-12-18/spotify-presents-the-first-ever-billions-club-live-show-with-the-weeknd/" class="d-block mt-2 text-white">
+                        <div class="image-container">
+                            <img src="imgs/spotify.jpg" alt="">
+                        </div>
+                        The Weeknd is the first artist with over 25 songs reaching 1 billion streams each on Spotify.
+                    </a>
+                </div>
+                  
+                  
+               
+            </div>  
+       </div>
+
+       <!-- Film & TV -->
+        <div class="text-center">
+            <p class="under-line h4 fw-bold mt-5">Film & TV</p>
+          </div>
+          
+        <div class="container mt-5" id="item5" >
+            
+            <div class="row" data-aos="fade-left">
+                <div class="col-sm-6 col-12 m-0 p-0 text-end">
+            
+                    <img src="imgs/idol.jpg" width="100%" height="auto"  alt="...">
+                  
+                </div>
+                <div class="col-sm-6 col-12 m-0 p-0 bg-white d-flex justify-content-center align-items-center">
+                    <div class="text-dark p-5">
+                        <h2>The Idol</h2>
+                        <h4>June 4, 2023 (HBO U.S. premiere)</h4>
+                        <div class="fst-italic">The Idol is a 2023 HBO series about Jocelyn, a pop star trying to make a comeback, and her dangerous relationship with Tedros, a nightclub owner and cult leader. Created by The Weeknd and Sam Levinson, the show explores fame, power, and the dark side of the music industry. It received mixed reviews but was praised for its bold storytelling.</div>
+                        <a role="button" href="https://www.imdb.com/title/tt14954666/" class="btn btn-info text-white mt-3 rounded-pill">
+                            
+                            More
+                            <i class="fa-solid fa-angles-right ms-2"></i>
+                        </a>
+                    </div>                   
                 </div>
               
             </div>
-       </div>
+            <div class="row mt-sm-0 mt-3" data-aos="fade-right">
+                <div class="col-sm-6 col-12 m-0 p-0 bg-white order-1 order-sm-1">
+                    <div class="text-dark p-5">
+                        <h2>Hurry Up Tomorrow</h2>
+                        <h4>May 16 ,2025</h4>
+                        <div class="fst-italic">Hurry Up Tomorrow is an upcoming movie project by The Weeknd (Abel Tesfaye). Although details remain limited, it is known to be a feature film co-written and co-produced by The Weeknd, following his interest in cinematic storytelling after his work on The Idol. The movie is expected to showcase his artistic vision beyond music, but its official plot and release date have not yet been confirmed.</div>
+                        <a role="button" href="https://www.imdb.com/title/tt26927452/" class="btn btn-warning text-white mt-3 rounded-pill">
+                            
+                            More
+                            <i class="fa-solid fa-angles-right ms-2"></i>
+                        </a>
+                    </div>        
+                      
+                   </div>
+                <div class="col-sm-6 col-12 m-0 p-0 order-0 order-sm-1">
+              
+                    <img src="imgs/hurry.jpg" width="100%" height="auto" alt="...">
+                  
+                </div>
+            </div>
+
+           
+           
+          
+        </div>
+
+
+        <!-- Merch -->
+        <!-- <div class="text-center mt-5">
+            <p class="text-center ms-4 h4 fw-bold mb-5 under-line">Merch</p>
+        </div>  
+        <div class="px-5 position-relative" id="item6">  -->
+            <!-- Swiper -->
+            <!-- <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                
+            </div>
+            <div class="position-absolute top-50 end-0 ">
+
+                <div class="swiper-button-next text-white"></div>
+            </div>
+            
+            <div class="position-absolute top-50 start-0 ">
+
+                <div class="swiper-button-prev text-white"></div>
+            </div>
+        </div> -->
+
     </div>
- 
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
       
 
 
     <footer >
-       
+       <div class="container">
+          
+       </div>
 
     </footer>
 

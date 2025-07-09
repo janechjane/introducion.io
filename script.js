@@ -1,23 +1,17 @@
 AOS.init();
 
-window.addEventListener('scroll', function () {
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  var cloudImage = document.getElementById('cloud-image');
-  var mainIllustration = document.getElementById('main-illustration');
-  var birdBackground = document.getElementById('bird-background');
-
-  var maxScroll = 400;
-
-  if (scrollTop <= maxScroll) {
-    var fadeEffect = Math.max(1 - scrollTop / maxScroll, 0);
-    cloudImage.style.cssText = `opacity: ${fadeEffect} !important;`;
-  }
-
-  if (scrollTop > maxScroll) {
-    var shrinkEffect = Math.min((scrollTop - maxScroll) / maxScroll, 1);
-    mainIllustration.style.cssText = `transform: scale(${1 - shrinkEffect * 0.5}) !important; top: ${shrinkEffect * 850}px !important; left: ${shrinkEffect * 400}px !important; opacity: ${1 - shrinkEffect} !important;`;
-    birdBackground.style.cssText = `opacity: ${shrinkEffect} !important;`;
-  }
+// swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
 document.addEventListener("DOMContentLoaded", function () {
